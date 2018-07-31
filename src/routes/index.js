@@ -12,6 +12,8 @@ function Routes() {
         <Path exact path="/" component={FeedContainer} />
         <Path exact path="/post/:id" component={PostDetail} />
         <Path exact path="/counter" component={CounterContainer} />
+        <Redirect from="/" to="/" />
+        <Redirect from="*" to="/" />
       </Switch>
     </React.Fragment>
   );

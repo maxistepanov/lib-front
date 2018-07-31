@@ -6,9 +6,15 @@ class MainLayout extends React.Component {
   render() {
     return (
       <Container>
-        <LeftSidebar />
-        <div>{this.props.children}</div>
-        <RightSidebar />
+        <div className={"row pure-g"}>
+          <div className={"pure-u-6-24"}>
+            <LeftSidebar />
+          </div>
+          <div className={"pure-u-15-24"}>{this.props.children}</div>
+          <div className={"pure-u-3-24"}>
+            <RightSidebar />
+          </div>
+        </div>
       </Container>
     );
   }

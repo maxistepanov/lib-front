@@ -32,5 +32,5 @@ class PostDetail extends React.Component {
 export default PostDetail;
 
 const Wrapper = styled.div`
-  margin: 10px 0;
+  padding: 10px;
 `;

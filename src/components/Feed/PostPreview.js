@@ -21,8 +21,10 @@ class PostPreview extends React.Component {
             <a href="#">Analytical applications</a>
           </H5>
           <p>
-            User interfaces that enable people to interact smoothly with data,
-            ask better questions, and make better decisions.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+            aliquid autem corporis delectus dolores doloribus earum, error
+            maiores minus, nobis obcaecati quidem quos reiciendis repellendus
+            totam ullam voluptatem. Recusandae, repudiandae?
           </p>
           <Actions>
             <Link to={"/post/123"}>Детальніше</Link>

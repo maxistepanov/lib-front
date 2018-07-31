@@ -10,6 +10,6 @@ class LeftSidebar extends React.Component {
 export default LeftSidebar;
 
 const Wrapper = styled.div`
-  width: 200px;
+  width: 100%;
   background: #afff8f;
 `;

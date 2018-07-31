@@ -10,6 +10,6 @@ class RightSidebar extends React.Component {
 export default RightSidebar;
 
 const Wrapper = styled.div`
-  width: 100px;
+  width: 100%;
   background: #43ffdf;
 `;
