@@ -26,6 +26,7 @@ const Container = styled.div`
   width: 900px;
   margin: 0 auto;
   min-height: 100vh;
+  position: relative;
 `;
 
 const Body = styled.div`

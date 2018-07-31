@@ -1,11 +1,16 @@
 import React from "react";
-import { CounterContainer } from "containers";
-import { Route } from "react-router-dom";
+import { Route, Switch, Redirect, Router } from "react-router-dom";
+
+import { CounterContainer, FeedContainer } from "../containers";
+import Path from "./Path";
 
 function Routes() {
   return (
     <React.Fragment>
-      <Route path="/" component={CounterContainer} />
+      <Switch>
+        <Path exact path="/" component={FeedContainer} />
+        <Path exact path="/counter" component={CounterContainer} />
+      </Switch>
     </React.Fragment>
   );
 }

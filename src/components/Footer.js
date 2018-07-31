@@ -16,5 +16,7 @@ export default Footer;
 const Wrapper = styled.div`
   height: 60px;
   width: 100%;
+  position: absolute;
+  bottom: 0;
   background: #ffb581;
 `;
