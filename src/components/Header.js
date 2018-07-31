@@ -1,35 +1,20 @@
-import React from 'react'
-import logo from 'assets/logo.svg'
-import styled, { keyframes } from 'styled-components'
-
-const rotate360 = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`
-
-const TopBar = styled.div`
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: #fff;
-
-  .redux-logo {
-    animation: ${rotate360} infinite 20s linear;
-    height: 80px;
-  }
-`
+import React from "react";
+import logo from "assets/header.jpg";
+import styled, { keyframes } from "styled-components";
 
 function Header() {
   return (
     <TopBar>
-      <img src={logo} className="redux-logo" alt="logo" />
-      <h2>Welcome to Create Redux App</h2>
+      <Image src={logo} alt="logo" />
     </TopBar>
-  )
+  );
 }
 
-export default Header
+export default Header;
+
+const TopBar = styled.div`
+  background-color: #ececec;
+  color: #fff;
+`;
+
+const Image = styled.img``;
