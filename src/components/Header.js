@@ -1,6 +1,6 @@
-import React from "react";
-import logo from "assets/header.jpg";
-import styled, { keyframes } from "styled-components";
+import React from 'react';
+import logo from 'assets/header.jpg';
+import styled, { keyframes } from 'styled-components';
 
 const Header = () => {
   return (
@@ -18,5 +18,5 @@ const TopBar = styled.div`
 `;
 
 const Image = styled.img`
-width: 100%;
+  width: 100%;
 `;

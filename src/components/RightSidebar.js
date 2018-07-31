@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import bibl from "../assets/img/bibliograph2.png";
-import udk from "../assets/img/Udk2.png";
-import dspace from "../assets/img/dspace3.jpg";
-import dspace2 from "../assets/img/dspace4.jpg";
-import web from "../assets/img/web.png";
-import baner from "../assets/img/baner2.png";
-import logo from "../assets/img/logo-news.gif";
-import hneu from "../assets/img/hneu.png";
-import uran from "../assets/img/uran.jpg";
-import eu from "../assets/img/EU2.png";
+import React from 'react';
+import styled from 'styled-components';
+import bibl from '../assets/img/bibliograph2.png';
+import udk from '../assets/img/Udk2.png';
+import dspace from '../assets/img/dspace3.jpg';
+import dspace2 from '../assets/img/dspace4.jpg';
+import web from '../assets/img/web.png';
+import baner from '../assets/img/baner2.png';
+import logo from '../assets/img/logo-news.gif';
+import hneu from '../assets/img/hneu.png';
+import uran from '../assets/img/uran.jpg';
+import eu from '../assets/img/EU2.png';
 
 class RightSidebar extends React.Component {
   render() {

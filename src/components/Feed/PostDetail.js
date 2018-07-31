@@ -1,12 +1,17 @@
-import React from "react";
-import styled from "styled-components";
-import withRouter from "react-router-dom/withRouter";
-import Link from "react-router-dom/Link";
-import { Card, H5 } from "@blueprintjs/core";
+import React from 'react';
+import styled from 'styled-components';
+import withRouter from 'react-router-dom/withRouter';
+import Link from 'react-router-dom/Link';
+import { Card, H5 } from '@blueprintjs/core';
+import { catalog } from '../../modules/api.methiod';
 
 class PostDetail extends React.Component {
+  componentDidMount() {
+    const cat = catalog();
+  }
+
   render() {
-    console.log("this", this.props);
+    console.log('this', this.props);
     return (
       <Wrapper>
         <Card {...this.state}>
@@ -18,7 +23,7 @@ class PostDetail extends React.Component {
             ask better questions, and make better decisions.
           </p>
           <Actions>
-            <Link to={"/"}>Назад</Link>
+            <Link to={'/'}>Назад</Link>
           </Actions>
         </Card>
       </Wrapper>

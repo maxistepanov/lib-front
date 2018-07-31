@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import {
   Alignment,
   Button,
   Classes,
   Navbar,
-  NavbarGroup
-} from "@blueprintjs/core";
+  NavbarGroup,
+} from '@blueprintjs/core';
 
 class Menu extends React.Component {
   render() {

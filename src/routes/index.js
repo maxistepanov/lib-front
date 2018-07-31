@@ -1,9 +1,9 @@
-import React from "react";
-import { Switch, Redirect } from "react-router-dom";
+import React from 'react';
+import { Switch, Redirect } from 'react-router-dom';
 
-import { CounterContainer, FeedContainer } from "../containers";
-import Path from "./Path";
-import PostDetail from "../components/Feed/PostDetail";
+import { CounterContainer, FeedContainer } from '../containers';
+import Path from './Path';
+import PostDetail from '../components/Feed/PostDetail';
 
 function Routes() {
   return (

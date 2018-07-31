@@ -1,8 +1,8 @@
-import React from "react";
-import { Header, Menu, Footer } from "components";
-import { BrowserRouter as Router } from "react-router-dom";
-import styled from "styled-components";
-import withScreenLoader from "modules/withScreenLoader";
+import React from 'react';
+import { Header, Menu, Footer } from 'components';
+import { BrowserRouter as Router } from 'react-router-dom';
+import styled from 'styled-components';
+import withScreenLoader from 'modules/withScreenLoader';
 import '../styles/app.css';
 
 class App extends React.Component {

@@ -1,39 +1,39 @@
-import axios from "axios";
-import qs from "qs";
-import SessionStorage from "./SessionStorage";
+import axios from 'axios';
+import qs from 'qs';
+import SessionStorage from './SessionStorage';
 
-const API = "http://www.lib.local/api";
+const API = 'http://www.lib.local/api';
 
 class Api {
   configs = {};
   defaultConfigs = {};
 
   constructor() {
-    const token = SessionStorage.get("token");
+    const token = SessionStorage.get('token');
     let headers = {};
 
     if (token) {
-      headers["Authorization"] = "Bearer " + token;
+      headers['Authorization'] = 'Bearer ' + token;
     }
 
     this.defaultConfigs = {
       headers,
-      params: {}
+      params: {},
     };
 
     this.resetConfigs();
   }
 
   getRuntimeConfigs() {
-    const token = SessionStorage.get("token");
+    const token = SessionStorage.get('token');
     let headers = {};
 
     if (token) {
-      headers["Authorization"] = "Bearer " + token;
+      headers['Authorization'] = 'Bearer ' + token;
     }
 
     return Object.assign({}, this.configs, {
-      headers
+      headers,
     });
   }
 
@@ -43,7 +43,7 @@ class Api {
 
   setConfig(key, value) {
     this.configs = Object.assign({}, this.configs, {
-      [key]: value
+      [key]: value,
     });
   }
 
@@ -56,9 +56,9 @@ class Api {
         params: Object.assign({}, runtimeConfigs.params, params),
         headers: Object.assign({}, runtimeConfigs.headers, headers),
         paramsSerializer: function(params) {
-          return qs.stringify(params, { arrayFormat: "brackets" });
-        }
-      })
+          return qs.stringify(params, { arrayFormat: 'brackets' });
+        },
+      }),
     );
   }
 
@@ -70,30 +70,30 @@ class Api {
   get(uri, params = {}, headers = {}, configs = {}) {
     return axios
       .get(`${API}/${uri}`, this.mergeConfigs(params, headers, configs))
-      .then(response => response.data);
+      .then((response) => response.data);
   }
 
   post(uri, data, params = {}, headers = {}, configs = {}) {
     return axios
       .post(`${API}/${uri}`, data, this.mergeConfigs(params, headers, configs))
-      .then(response => response.data);
+      .then((response) => response.data);
   }
 
   put(uri, data, params = {}, headers = {}, configs = {}) {
     return axios
       .put(`${API}/${uri}`, data, this.mergeConfigs(params, headers, configs))
-      .then(response => response.data);
+      .then((response) => response.data);
   }
 
   delete(uri, params = {}, headers = {}, configs = {}) {
     return axios
       .delete(`${API}/${uri}`, this.mergeConfigs(params, headers, configs))
-      .then(response => response.data);
+      .then((response) => response.data);
   }
 
   upload(uri, file, data, params = {}, headers = {}, configs = {}) {
     let formData = new FormData();
-    formData.append("file", file);
+    formData.append('file', file);
 
     for (const key in data) {
       if (data.hasOwnProperty(key)) {

@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-const withScreenLoader = Component => {
+const withScreenLoader = (Component) => {
   return class extends React.Component {
     componentDidMount() {
-      const loader = document.getElementById("container-loader");
+      const loader = document.getElementById('container-loader');
       if (loader) {
-        loader.classList.add("hide");
+        loader.classList.add('hide');
         setTimeout(() => {
-          loader.outerHTML = "";
+          loader.outerHTML = '';
         }, 2000);
       }
     }

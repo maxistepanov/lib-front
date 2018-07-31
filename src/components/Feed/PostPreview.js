@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Card, H5 } from "@blueprintjs/core";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Card, H5 } from '@blueprintjs/core';
+import { Link } from 'react-router-dom';
 
 class PostPreview extends React.Component {
   render() {
@@ -18,7 +18,7 @@ class PostPreview extends React.Component {
             totam ullam voluptatem. Recusandae, repudiandae?
           </p>
           <Actions>
-            <Link to={"/post/123"}>Детальніше</Link>
+            <Link to={'/post/123'}>Детальніше</Link>
           </Actions>
         </Card>
       </Wrapper>
