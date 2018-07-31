@@ -13,6 +13,7 @@ class FeedContainer extends React.Component {
         <PostPreview/>
         <PostPreview/>
         <PostPreview/>
+        <PostPreview/>
       </Wrapper>
     );
   }

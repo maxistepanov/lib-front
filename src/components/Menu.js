@@ -4,12 +4,8 @@ import {
   Alignment,
   Button,
   Classes,
-  H5,
   Navbar,
-  NavbarDivider,
-  NavbarGroup,
-  NavbarHeading,
-  Switch
+  NavbarGroup
 } from "@blueprintjs/core";
 
 class Menu extends React.Component {

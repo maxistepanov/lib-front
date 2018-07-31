@@ -41,6 +41,8 @@
       }
       .hide {
         opacity: 0;
+        animation: out 0.5s;
+
       }
 
       .container-loader{
@@ -54,9 +56,9 @@
         margin-bottom: 4%;
         background: #ececec;
         pointer-events: none;
-        -webkit-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
-        -moz-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
-        transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+        -webkit-transition: opacity ease-in-out 0.5ms;
+        -moz-transition: opacity ease-in-out 0.5ms;
+        transition: opacity ease-in-out 0.5ms;
         z-index: 9999;
       }
 
@@ -178,6 +180,15 @@
         }
         100%{transform: translateY(-180px);}
 
+      }
+      @keyframes out{
+        from{
+          opacity: 1;
+        }
+
+        to{
+          opacity: 0;
+        }
       }
     </style>
   </head>

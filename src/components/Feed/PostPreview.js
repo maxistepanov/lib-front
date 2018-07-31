@@ -1,15 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Button,
-  Card,
-  Classes,
-  Elevation,
-  H5,
-  Label,
-  Slider,
-  Switch
-} from "@blueprintjs/core";
+import { Card, H5 } from "@blueprintjs/core";
 import { Link } from "react-router-dom";
 
 class PostPreview extends React.Component {
@@ -22,7 +13,7 @@ class PostPreview extends React.Component {
           </H5>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
-            aliquid autem corporis delectus dolores doloribus earum, error
+            aliquid autem corporis 545delectus dolores doloribus earum, error
             maiores minus, nobis obcaecati quidem quos reiciendis repellendus
             totam ullam voluptatem. Recusandae, repudiandae?
           </p>

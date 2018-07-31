@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, Redirect, Router } from "react-router-dom";
+import { Switch, Redirect } from "react-router-dom";
 
 import { CounterContainer, FeedContainer } from "../containers";
 import Path from "./Path";
