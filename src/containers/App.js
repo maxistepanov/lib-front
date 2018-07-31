@@ -3,9 +3,14 @@ import { Header, Menu, Footer } from 'components';
 import { BrowserRouter as Router } from 'react-router-dom';
 import styled from 'styled-components';
 import withScreenLoader from 'modules/withScreenLoader';
+import { connect } from 'react-redux';
 import '../styles/app.css';
+import { requestMenu } from '../actions/menu';
 
 class App extends React.Component {
+  componentDidMount() {
+    this.props.menu();
+  }
   render() {
     return (
       <Router>
@@ -20,7 +25,22 @@ class App extends React.Component {
   }
 }
 
-export default withScreenLoader(App);
+const mapStateToProps = (state) => {
+  return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    menu: () => dispatch(requestMenu()),
+  };
+};
+
+export default withScreenLoader(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(App),
+);
 
 const Container = styled.div`
   text-align: center;

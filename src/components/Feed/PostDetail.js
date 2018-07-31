@@ -3,15 +3,12 @@ import styled from 'styled-components';
 import withRouter from 'react-router-dom/withRouter';
 import Link from 'react-router-dom/Link';
 import { Card, H5 } from '@blueprintjs/core';
-import { catalog } from '../../modules/api.methiod';
+import { connect } from 'react-redux';
 
 class PostDetail extends React.Component {
-  componentDidMount() {
-    const cat = catalog();
-  }
+  componentDidMount() {}
 
   render() {
-    console.log('this', this.props);
     return (
       <Wrapper>
         <Card {...this.state}>
@@ -31,8 +28,20 @@ class PostDetail extends React.Component {
   }
 }
 
-export default withRouter(PostDetail);
+const mapStateToProps = (state) => {
+  return {};
+};
 
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(PostDetail),
+);
 const Wrapper = styled.div`
   padding: 10px;
 `;
