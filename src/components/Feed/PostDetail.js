@@ -10,9 +10,8 @@ import {
   Slider,
   Switch
 } from "@blueprintjs/core";
-import { Link } from "react-router-dom";
 
-class PostPreview extends React.Component {
+class PostDetail extends React.Component {
   render() {
     return (
       <Wrapper>
@@ -24,21 +23,14 @@ class PostPreview extends React.Component {
             User interfaces that enable people to interact smoothly with data,
             ask better questions, and make better decisions.
           </p>
-          <Actions>
-            <Link to={"/post/123"}>Детальніше</Link>
-          </Actions>
         </Card>
       </Wrapper>
     );
   }
 }
 
-export default PostPreview;
+export default PostDetail;
 
 const Wrapper = styled.div`
   margin: 10px 0;
-`;
-
-const Actions = styled.div`
-  display: flex;
 `;
