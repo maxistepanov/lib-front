@@ -1,19 +1,33 @@
 import React from "react";
+import { Header, Menu, Footer } from "components";
+import { BrowserRouter as Router } from "react-router-dom";
+import styled from "styled-components";
+import withScreenLoader from "modules/withScreenLoader";
 
 class App extends React.Component {
-  componentDidMount() {
-    const loader = document.getElementById("container-loader");
-    if (loader) {
-      loader.classList.add("hide");
-      setTimeout(() => {
-        loader.outerHTML = "";
-      }, 2000);
-    }
-  }
-
   render() {
-    return this.props.children;
+    return (
+      <Router>
+        <Container>
+          <Header />
+          <Menu />
+          <Body>{this.props.children}</Body>
+          <Footer />
+        </Container>
+      </Router>
+    );
   }
 }
 
-export default App;
+export default withScreenLoader(App);
+
+const Container = styled.div`
+  text-align: center;
+  width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+`;
+
+const Body = styled.div`
+  min-height: 600px;
+`;
