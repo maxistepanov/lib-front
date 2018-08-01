@@ -5,18 +5,15 @@ import { Link } from 'react-router-dom';
 
 class PostPreview extends React.Component {
   render() {
+    const { post } = this.props;
+
     return (
       <Wrapper>
         <Card {...this.state}>
           <H5>
-            <a href="#">Analytical applications</a>
+            <a href="#" dangerouslySetInnerHTML={{ __html: post.title }} />
           </H5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
-            aliquid autem corporis 545delectus dolores doloribus earum, error
-            maiores minus, nobis obcaecati quidem quos reiciendis repellendus
-            totam ullam voluptatem. Recusandae, repudiandae?
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
           <Actions>
             <Link to={'/post/123'}>Детальніше</Link>
           </Actions>

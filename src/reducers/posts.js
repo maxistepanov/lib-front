@@ -5,6 +5,10 @@ import { postSchema } from 'normalize/post.normalize';
 
 const initialState = {
   data: [],
+  normalized: {
+    result: [],
+    entities: [],
+  },
 };
 
 export default handleActions(

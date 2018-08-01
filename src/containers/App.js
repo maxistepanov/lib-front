@@ -43,7 +43,7 @@ export default connect(
 
 const Container = styled.div`
   text-align: center;
-  width: 900px;
+  width: 1000px;
   margin: 0 auto;
   min-height: 100vh;
   position: relative;
