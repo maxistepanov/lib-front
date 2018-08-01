@@ -10,7 +10,7 @@ import { getMenu } from '../modules/ApiClient';
 import {
   MENU_FAILED,
   MENU_REQUESTED,
-  MENU_SUCCEEDED,
+  MENU_SUCCESS,
 } from '../constants/MenuTypes';
 
 export function* fetch(action) {
@@ -18,7 +18,7 @@ export function* fetch(action) {
     console.log('fetch');
     const data = yield call(getMenu);
     console.log('data', data);
-    yield put({ type: MENU_SUCCEEDED, data });
+    yield put({ type: MENU_SUCCESS, data });
   } catch (error) {
     yield put({ type: MENU_FAILED, error });
   }

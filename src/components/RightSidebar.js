@@ -73,8 +73,10 @@ class RightSidebar extends React.Component {
 export default RightSidebar;
 
 const Wrapper = styled.div`
+  padding: 5px;
+  background-color: #ffffff;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 15px;
 `;
 
 const Item = styled.div`
