@@ -1,12 +1,21 @@
 import { handleActions } from 'redux-actions';
+import { POSTS_SUCCESS } from 'constants/PostsTypes';
+import { normalize } from 'normalizr';
+import { postSchema } from 'normalize/post.normalize';
 
-const initialState = 0;
+const initialState = {
+  data: [],
+};
 
 export default handleActions(
   {
-    INCREMENT_COUNTER: (state, { payload }) => state + 1,
-
-    DECREMENT_COUNTER: (state) => state - 1,
+    [POSTS_SUCCESS]: (state, { data }) => {
+      const normalized = normalize(data.data, postSchema);
+      return {
+        ...data,
+        normalized,
+      };
+    },
   },
   initialState,
 );

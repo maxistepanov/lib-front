@@ -2,7 +2,7 @@ import { handleActions } from 'redux-actions';
 import { normalize } from 'normalizr';
 
 import { MENU_SUCCESS } from '../constants/MenuTypes';
-import { menuSchema } from '../normalize/menu.normalize';
+import { mainSchema } from '../normalize/main.normalize';
 
 const initialState = {
   items: [],
@@ -11,7 +11,7 @@ const initialState = {
 export default handleActions(
   {
     [MENU_SUCCESS]: (state, { data }) => {
-      const normalized = normalize(data, menuSchema);
+      const normalized = normalize(data, mainSchema);
       return {
         ...data,
         normalized,
