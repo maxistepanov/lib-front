@@ -3,6 +3,7 @@ import { Header, Menu, Footer } from 'components';
 import { BrowserRouter as Router } from 'react-router-dom';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+import { createStructuredSelector, createSelector } from 'reselect';
 import '../styles/app.css';
 import { init } from '../actions/init';
 
@@ -11,12 +12,13 @@ class App extends React.Component {
     this.props.init();
   }
   render() {
+    const { menus, children } = this.props;
     return (
       <Router>
         <Container>
           <Header />
-          <Menu />
-          <Body>{this.props.children}</Body>
+          <Menu items={menus} />
+          <Body>{children}</Body>
           <Footer />
         </Container>
       </Router>
@@ -24,9 +26,9 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {};
-};
+const mapStateToProps = createStructuredSelector({
+  menus: createSelector(({ menu }) => menu.items, (state) => state),
+});
 
 const mapDispatchToProps = (dispatch) => {
   return {
