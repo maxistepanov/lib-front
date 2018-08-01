@@ -2,14 +2,13 @@ import React from 'react';
 import { Header, Menu, Footer } from 'components';
 import { BrowserRouter as Router } from 'react-router-dom';
 import styled from 'styled-components';
-import withScreenLoader from 'modules/withScreenLoader';
 import { connect } from 'react-redux';
 import '../styles/app.css';
-import { requestMenu } from '../actions/menu';
+import { init } from '../actions/init';
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.menu();
+    this.props.init();
   }
   render() {
     return (
@@ -31,16 +30,14 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    menu: () => dispatch(requestMenu()),
+    init: () => dispatch(init()),
   };
 };
 
-export default withScreenLoader(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps,
-  )(App),
-);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(App);
 
 const Container = styled.div`
   text-align: center;

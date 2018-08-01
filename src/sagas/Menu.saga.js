@@ -15,9 +15,7 @@ import {
 
 export function* fetch(action) {
   try {
-    console.log('fetch');
     const data = yield call(getMenu);
-    console.log('data', data);
     yield put({ type: MENU_SUCCESS, data });
   } catch (error) {
     yield put({ type: MENU_FAILED, error });
