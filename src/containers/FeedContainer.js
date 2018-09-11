@@ -7,23 +7,19 @@ import PostPreview from 'components/Feed/PostPreview';
 class FeedContainer extends React.Component {
   render() {
     console.log('this', this.props);
-    const { feed } = this.props;
+    const { posts = [] } = this.props;
     return (
       <Wrapper>
-        {feed.result.map((id) => {
-          return <PostPreview key={id} post={feed.entities.posts[id]} />;
-        })}
+        {posts.map((post) => <PostPreview key={post.id} post={post} />)}
       </Wrapper>
     );
   }
 }
 const mapStateToProps = createStructuredSelector({
-  feed: createSelector(({ posts }) => posts.normalized, (state) => state),
+  posts: createSelector(({ posts }) => posts.data, (state) => state),
 });
 
-const mapDispatchToProps = (dispatch) => {
-  return {};
-};
+const mapDispatchToProps = (dispatch) => ({});
 export default connect(
   mapStateToProps,
   mapDispatchToProps,

@@ -12,13 +12,14 @@ class Api {
     const token = SessionStorage.get('token');
     let headers = {};
 
-    if (token) {
-      headers['Authorization'] = 'Bearer ' + token;
-    }
+    // if (token) {
+    //   headers['Authorization'] = 'Bearer ' + token;
+    // }
 
     this.defaultConfigs = {
       headers,
       params: {},
+      crossDomain: true,
     };
 
     this.resetConfigs();
@@ -27,14 +28,12 @@ class Api {
   getRuntimeConfigs() {
     const token = SessionStorage.get('token');
     let headers = {};
+    //
+    // if (token) {
+    //   headers['Authorization'] = 'Bearer ' + token;
+    // }
 
-    if (token) {
-      headers['Authorization'] = 'Bearer ' + token;
-    }
-
-    return Object.assign({}, this.configs, {
-      headers,
-    });
+    return { ...this.configs, ...headers };
   }
 
   resetConfigs() {
