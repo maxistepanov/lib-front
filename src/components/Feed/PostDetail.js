@@ -28,13 +28,11 @@ class PostDetail extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {};
-};
+const mapStateToProps = (state) => ({
+  // posts: state.posts.data
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {};
-};
+const mapDispatchToProps = (dispatch) => ({});
 
 export default withRouter(
   connect(

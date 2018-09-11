@@ -11,11 +11,14 @@ class PostPreview extends React.Component {
       <Wrapper>
         <Card {...this.state}>
           <H5>
-            <a href="#" dangerouslySetInnerHTML={{ __html: post.title }} />
+            <Link
+              to={`/post/${post.slug}`}
+              dangerouslySetInnerHTML={{ __html: post.title }}
+            />
           </H5>
           <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
           <Actions>
-            <Link to={'/post/123'}>Детальніше</Link>
+            <Link to={`/post/${post.slug}`}>Детальніше</Link>
           </Actions>
         </Card>
       </Wrapper>
