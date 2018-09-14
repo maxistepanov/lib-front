@@ -4,10 +4,15 @@ import withRouter from 'react-router-dom/withRouter';
 import Link from 'react-router-dom/Link';
 import { Card, H5 } from '@blueprintjs/core';
 import { connect } from 'react-redux';
+import { getPostBySlug } from 'modules/ApiClient';
 
 class PostDetail extends React.Component {
-  componentDidMount() {}
+  componentDidMount() {
+    const { slug } = this.props.match.params;
+    console.log('this.priopos', slug);
 
+    // this.props.getPost(slug)
+  }
   render() {
     return (
       <Wrapper>
@@ -29,10 +34,12 @@ class PostDetail extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  // posts: state.posts.data
+  posts: state.posts.data,
 });
 
-const mapDispatchToProps = (dispatch) => ({});
+const mapDispatchToProps = (dispatch) => ({
+  getPost: (slug) => dispatch(getPostBySlug(slug)),
+});
 
 export default withRouter(
   connect(

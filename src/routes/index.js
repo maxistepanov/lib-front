@@ -16,7 +16,7 @@ function Routes() {
     <React.Fragment>
       <Switch>
         <Path exact path="/" component={FeedContainer} />
-        <Path exact path="/post/:id" component={PostDetail} />
+        <Path exact path="/post/:slug" component={PostDetail} />
         <Path
           exact
           path="/service/catalog"

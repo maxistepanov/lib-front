@@ -6,4 +6,6 @@ const getMenu = async () => Api.get('menu');
 
 const getPosts = async () => Api.get('posts');
 
-export { getCatalog, getMenu, getPosts };
+const getPostBySlug = async (slug) => Api.get(`posts/${slug}`);
+
+export { getCatalog, getMenu, getPosts, getPostBySlug };
